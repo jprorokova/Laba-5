@@ -1,5 +1,6 @@
 ﻿
 #include <iostream>
+#include "RTree.h"
 using namespace std;
 
 
@@ -14,6 +15,7 @@ int main(int argc,char* argv[])
     double latitude = atof(argv[1]);
     double longitude = atof(argv[2]);
     long int size = atof(argv[3]);
+    RTree data;
 
 }
 
