@@ -18,8 +18,21 @@ struct Loc {
 class Rectangle
 {
 public:
-	Rectangle();
+	Rectangle(Loc lDown, Loc lUp, Loc rDown, Loc rUp) : lUp(lUp),
+		rDown(rDown),
+		rUp(rUp),
+		lDown(lDown) {
+
+	}
+	;
 	vector<Loc> locations;//
+	Loc lDown;
+	Loc lUp;
+	Loc rDown;
+	Loc rUp;
+	void addLocation(Loc location);
+	bool check(Loc location);
+	double dist(double& A1, double& B1, double& A2, double& B2);
 	
 
 };
