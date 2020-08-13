@@ -12,3 +12,17 @@ double Rectangle::dist(double& A1, double& B1, double& A2, double& B2) {
     result = 2 * asin(squereRoot) * radius;
     return result;
 }
+void Rectangle::restructure(Loc location) {
+    double left = min(this->lDown.latitude,location.latitude);
+    double right = max(this->rDown.latitude, location.latitude);
+    double up= min(this->lUp.longitude, location.longitude);
+    double down = max(this->lDown.longitude, location.longitude);
+    this->lUp.longitude = up;
+    this->rUp.longitude = up;
+    this->lDown.longitude = down;
+    this->rDown.longitude = down;
+    this->lDown.latitude = left;
+    this->lUp.latitude = left;
+    this->rDown.latitude = right;
+    this->rUp.latitude = right;
+}

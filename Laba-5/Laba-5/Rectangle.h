@@ -1,6 +1,7 @@
 #pragma once
 #include <string>
 #include <vector>
+#include <algorithm>
 using namespace std;
 struct Loc {
 	double latitude;
@@ -33,7 +34,7 @@ public:
 	void addLocation(Loc location);
 	bool check(Loc location);
 	double dist(double& A1, double& B1, double& A2, double& B2);
-	
+	void restructure(Loc location);
 
 };
 
