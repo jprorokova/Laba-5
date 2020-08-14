@@ -17,7 +17,14 @@ int main(int argc,char* argv[])
     long int size = atof(argv[3]);
     RTree tree;
     tree.readingFile(fileName);
-    
+    tree.findPlaces(latitude, longitude, size, tree.root->children[0]);
+    tree.findPlaces(latitude, longitude, size, tree.root->children[1]);
+   /* tree.findPlaces(50.39195, 30.45944, 500, tree.root->children[0]);
+    tree.findPlaces(50.39195, 30.45944, 500, tree.root->children[1]);
+    tree.findPlaces(48.50099, 35.95139, 500, tree.root->children[0]);
+    tree.findPlaces(48.50099, 35.95139, 500, tree.root->children[1]);
+    */
+    return 0;
 
 }
 
