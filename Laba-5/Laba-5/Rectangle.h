@@ -27,6 +27,7 @@ public:
 	}
 	;
 	vector<Loc> locations;//
+	vector<Rectangle> children;
 	Loc lDown;
 	Loc lUp;
 	Loc rDown;
@@ -35,6 +36,7 @@ public:
 	bool check(Loc location);
 	double dist(double& A1, double& B1, double& A2, double& B2);
 	void restructure(Loc location);
+	void devideRoot();
 
 };
 

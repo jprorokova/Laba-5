@@ -8,5 +8,6 @@ public:
 	void readingFile(string name);
 	void findPlaces(double latitude, double longitude, long int size);
 	Rectangle* root;
+	Rectangle* getRoot();
 };
 
